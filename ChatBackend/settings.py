@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'chat.apps.ChatConfig',
+    'channels',
     'rest_framework',
 ]
 
@@ -135,3 +137,6 @@ REST_FRAMEWORK = { # IsAuthenticated
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
+
+
+ASGI_APPLICATION = "ChatBackend.asgi.application"
