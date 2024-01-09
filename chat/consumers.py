@@ -1,7 +1,6 @@
 from channels.generic.websocket import WebsocketConsumer
 import json
 from time import sleep
-from channels import Group
 
 
 # ws://localhost:8000/ws/counter/
