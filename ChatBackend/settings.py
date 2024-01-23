@@ -141,3 +141,9 @@ REST_FRAMEWORK = { # IsAuthenticated
 
 
 ASGI_APPLICATION = "ChatBackend.asgi.application"
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': "channels.layers.InMemoryChannelLayer"
+    }
+}
